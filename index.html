@@ -11,6 +11,10 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+    <link
+      href="https://fonts.googleapis.com/css?family=Space Mono"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Frontend Mentor | Tip calculator app</title>
   </head>
@@ -25,8 +29,12 @@
                 <h4>Bill</h4>
               </div>
               <div class="screen-content">
-                <img src="images/icon-dollar.svg" alt="Dollar sign" class="inputIcon dollar">
-               <input type="number" value="0" class="inputNumber">
+                <img
+                  src="images/icon-dollar.svg"
+                  alt="Dollar sign"
+                  class="inputIcon dollar"
+                />
+                <input type="number" value="0" min="0" class="inputNumber" />
               </div>
             </div>
             <div class="button-box">
@@ -46,25 +54,27 @@
               <div class="people-head head">
                 <h4>Number of People</h4>
                 <div class="screen-content">
-                    <img src="images/icon-person.svg" class="inputIcon person" alt="People Icon">
-                    <input type="number" value="0" class="inputNumber">
-                  </div>
+                  <img
+                    src="images/icon-person.svg"
+                    class="inputIcon person"
+                    alt="People Icon"
+                  />
+                  <input type="number" value="1" min="1" class="inputNumber" />
+                </div>
               </div>
             </div>
           </div>
         </div>
         <div class="right">
           <div class="content-right">
-
             <div class="tip-amount">
               <div class="tip-text">
-                <h4 class="amount">Tip Amount </h4>
+                <h4 class="amount">Tip Amount</h4>
                 <span class="per-person">/ person</span>
-                
               </div>
               <div class="tip-value">
                 <div class="icon">
-                  <img src="images/icon-dollar.svg" class="dollar" alt="">
+                  <img src="images/icon-dollar.svg" class="dollar" alt="" />
                 </div>
                 <div class="value">0</div>
               </div>
@@ -76,15 +86,15 @@
               </div>
               <div class="total-value">
                 <div class="icon">
-                  <img src="images/icon-dollar.svg" class="dollar" alt="">
+                  <img src="images/icon-dollar.svg" class="dollar" alt="" />
                 </div>
                 <div class="value">0</div>
               </div>
             </div>
-            <button class="reset"> RESET</button>
-          </div>
+            <button class="reset">RESET</button>
           </div>
         </div>
+      </div>
       <div class="attribution">
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"

@@ -12,6 +12,10 @@
   padding: 0;
   top: 0;
   box-sizing: border-box;
+  font-family: "Space Mono";
+}
+body{
+  font-family: "Space Mono";
 }
 .container {
   height: 100vh;
@@ -81,14 +85,24 @@ input[type="number"] {
   border: none;
   margin: 8px 0;
   padding: 2px 0;
-  font-size: 24px;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: right;
   outline: none;
   box-sizing: border-box;
   background-color: var(--lightGrayishCyan);
+  color: var(--veryDarkCyan);
+  -moz-appearance: textfield;
+  
 }
 input[type="number"]:focus {
   border-color: var(--darkGrayishCyan);
   /* border: 2px solid var(--darkGrayishCyan); */
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 10px;
 }
 
 .screen-content {
@@ -173,9 +187,16 @@ h4 {
   color: hsl(228, 45%, 44%);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 990px) {
+  html {
+    font-size: 80%;
+  }
   .box {
     flex-direction: column;
     display: flex;
+    height: fit-content;
+  }
+  .container{
+    height: 100%;
   }
 }

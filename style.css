@@ -67,27 +67,28 @@ header, footer{
 input[type="number"] {
   width: 100%;
   border: none;
-  margin: 5px 0;
   padding: 2px 0;
   font-size: 24px;
   font-weight: bold;
   text-align: right;
   outline: none;
   box-sizing: border-box;
-  border-radius: 1rem;
+  border-radius: .5rem;
   background-color: var(--lightPrimary  );
   color: var(--secondary);
   -moz-appearance: textfield;
 }
 input[type="number"]:focus {
   border-color: var(--secondary);
-  /* outline: 2px solid red; */
-  /* border: 2px solid var(--darkGrayishCyan); */
+
 }
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 10px;
+}
+input[type="number"] .custom {
+  /* height: 2rem; */
 }
 .screen-content{
   display: flex;
@@ -124,7 +125,7 @@ input[type="number"]::-webkit-outer-spin-button {
 .key{
   background-color: var(--secondary);
   border: none;
-  border-radius: .2rem;
+  border-radius: .5rem;
   color: white;
   font-weight: bold;
   padding: .5rem;
@@ -159,10 +160,14 @@ input[type="number"]::-webkit-outer-spin-button {
 .custom{
   background-color: var(--lightPrimary);
   color: var(--secondary);
-}
-.custom:hover{
+  }
+.custom:hover, .custom:focus{
   outline: 2px solid var(--primary);
   background-color: var(--lightPrimary);
+}
+.custom::placeholder{
+  color: var(--secondary);
+  font-size: 1.2rem;
 }
 
 

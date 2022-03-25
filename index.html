@@ -16,6 +16,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
     <title>Frontend Mentor | Tip calculator app</title>
   </head>
   <body>
@@ -36,7 +37,7 @@
                   alt="Dollar sign"
                   class="inputIcon dollar"
                 />
-                <input type="number" value="0" min="0" class="inputNumber" />
+                <input data-price type="number" value="0" min="0" class="inputNumber" />
               </div>
             </div>
             <div class="button-box">
@@ -44,26 +45,43 @@
                 <h4>Select Tip %</h4>
               </div>
               <div class="buttons">
-                <input type="button" value="5%" class="key">
-                <input type="button" value="10%" class="key">
-                <input type="button" value="15%" class="key">
-                <input type="button" value="25%" class="key">
-                <input type="button" value="50%" class="key">
-                <input type="number" min="1" max="100" class="key custom" placeholder="Custom">
+                <button data-number class="key btn-key">
+                  5%
+                </button>
+                <button data-number class="key btn-key">
+                 10%
+                </button>
+                <button data-number class="key btn-key">
+                 15%
+                </button>
+                <button data-number class="key btn-key">
+                25%
+                </button>
+                <button data-number class="key btn-key">
+                  <span class="btn-value">50</span>%
+                </button>
+                <input
+                data-custom
+                class="key custom"
+                  type="number"
+                  min="1"
+                  max="100"
+                  placeholder="Custom"
+                />
               </div>
             </div>
             <div class="people-box">
               <div class="people-head head">
                 <h4>Number of People</h4>
               </div>
-                <div class="screen-content">
-                  <img
-                    src="images/icon-person.svg"
-                    class="inputIcon person"
-                    alt="People Icon"
-                  />
-                  <input type="number" value="1" min="1" class="inputNumber" />
-                </div>
+              <div class="screen-content people-screen">
+                <img
+                  src="images/icon-person.svg"
+                  class="inputIcon person"
+                  alt="People Icon"
+                />
+                <input data-people type="number" value="1" min="1" class="inputNumber" id="people" />
+              </div>
             </div>
           </div>
         </div>
@@ -78,7 +96,7 @@
                 <div class="icon">
                   <img src="images/icon-dollar.svg" class="dollar" alt="" />
                 </div>
-                <div class="value">0</div>
+                <div class="value tipValue">0.00</div>
               </div>
             </div>
             <div class="total-amount">
@@ -90,7 +108,7 @@
                 <div class="icon">
                   <img src="images/icon-dollar.svg" class="dollar" alt="" />
                 </div>
-                <div class="value">0</div>
+                <div class="value totalValue">0.00</div>
               </div>
             </div>
             <button class="reset">RESET</button>
@@ -99,12 +117,17 @@
       </div>
       <footer class="attribution">
         <div>
-          Challenge by 
+          Challenge by
 
-          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"> Frontend Mentor</a>. 
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
+            Frontend Mentor</a
+          >.
         </div>
         <div>
-          Coded by <a href="https://github.com/rahmlad-aramide" target="_blank">Abdrahman Oladimeji</a>.
+          Coded by
+          <a href="https://github.com/rahmlad-aramide" target="_blank"
+            >Abdrahman Oladimeji</a
+          >.
         </div>
       </footer>
     </div>

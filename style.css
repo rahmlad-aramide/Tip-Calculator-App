@@ -64,36 +64,43 @@ header, footer{
   align-items: center;
 }
 
-input[type="number"] {
+input[type="number"]{
   width: 100%;
-  border: none;
   padding: 2px 0;
   font-size: 24px;
   font-weight: bold;
   text-align: right;
   outline: none;
+  border: none;
   box-sizing: border-box;
   border-radius: .5rem;
   background-color: var(--lightPrimary  );
   color: var(--secondary);
   -moz-appearance: textfield;
 }
+input::placeholder .custom{
+  text-align: center;
+  padding: 0;
+}
 input[type="number"]:focus {
   border-color: var(--secondary);
-
 }
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
+input[type="number"]:not(.custom)::-webkit-inner-spin-button,
+input[type="number"]:not(.custom)::-webkit-outer-spin-button {
   -webkit-appearance: none;
-  margin: 10px;
 }
-input[type="number"] .custom {
-  /* height: 2rem; */
+input[type="number"]:not(.screen-content)::-webkit-inner-spin-button,
+input[type="number"]:not(.screen-content)::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  padding: 10px;
 }
 .screen-content{
   display: flex;
   background-color: var(--lightPrimary);
   border-radius: .5rem;
+}
+.screen-content:hover, .screen-content:focus{
+  outline: 2px solid var(--primary);
 }
 .inputNumber{
   position: relative;
@@ -128,13 +135,14 @@ input[type="number"] .custom {
   border-radius: .5rem;
   color: white;
   font-weight: bold;
-  padding: .5rem;
+  height: 2.5rem;
   font-size: 1.2rem;
 }
-.key:hover {
+.key:hover, .active {
   background-color: var(--primary);
   color: var(--secondary);
 }
+
 .per-person{
   opacity: .8;
 }
@@ -160,14 +168,20 @@ input[type="number"] .custom {
 .custom{
   background-color: var(--lightPrimary);
   color: var(--secondary);
+
   }
 .custom:hover, .custom:focus{
   outline: 2px solid var(--primary);
   background-color: var(--lightPrimary);
 }
-.custom::placeholder{
+.danger {
+  outline: 2px solid red;
+  border: 2px solid red;
+}
+input.custom::placeholder{
   color: var(--secondary);
-  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
 }
 
 

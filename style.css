@@ -191,6 +191,7 @@ input.custom::placeholder{
   }
   .box {
     flex-direction: column;
+    margin: 10%;
   }
   .left, .right {
     width: 100%;
@@ -204,6 +205,11 @@ input.custom::placeholder{
     align-items: center;
   }
 }
+@media (max-width: 600px) {
+.box {
+  margin: 5%;
+  }
+}  
 @media (max-width: 375px){
   html {
     font-size: 70%;

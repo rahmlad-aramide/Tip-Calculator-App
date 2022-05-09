@@ -36,7 +36,7 @@ header, footer{
 .box{
   display: flex;
   justify-content: center;
-  margin: 0 20%;
+  margin: 0 10%;
   padding: 1%;
   border-radius: 1rem;
   background-color: var(--lighterPrimary);
